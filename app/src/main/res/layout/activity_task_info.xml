@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TaskInfo">
+
+    <TextView
+        android:id="@+id/TaskNameFixedView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="Task Name :"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/TaskNameText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/TaskNameText"
+        app:layout_constraintVertical_bias="0.52" />
+
+    <TextView
+        android:id="@+id/TaskNameText"
+        android:layout_width="165dp"
+        android:layout_height="88dp"
+        android:layout_marginStart="68dp"
+        android:layout_marginBottom="48dp"
+        android:textSize="22sp"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toTopOf="@+id/TaskDescriptionText"
+        app:layout_constraintStart_toEndOf="@+id/TaskNameFixedView" />
+
+    <TextView
+        android:id="@+id/TaskDescriptionFixed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="Description : "
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/TaskDescriptionText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/TaskDescriptionText"
+        app:layout_constraintVertical_bias="0.288" />
+
+    <TextView
+        android:id="@+id/TaskDescriptionText"
+        android:layout_width="162dp"
+        android:layout_height="87dp"
+        android:layout_marginBottom="208dp"
+        android:textSize="22sp"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toTopOf="@+id/DeleteTaskBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.692"
+        app:layout_constraintStart_toEndOf="@+id/TaskDescriptionFixed" />
+
+    <Button
+        android:id="@+id/DeleteTaskBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="28dp"
+        android:enabled="false"
+        android:text="Delete Task"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.474"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/Assignedto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="96dp"
+        android:text="Assigned-To:"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/TaskDescriptionFixed"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/TaskDescriptionFixed"
+        app:layout_constraintTop_toBottomOf="@+id/TaskDescriptionFixed" />
+
+    <TextView
+        android:id="@+id/Assignedtoview"
+        android:layout_width="145dp"
+        android:layout_height="89dp"
+        android:textSize="22sp"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toBottomOf="@+id/Assignedto"
+        app:layout_constraintEnd_toEndOf="@+id/TaskDescriptionText"
+        app:layout_constraintHorizontal_bias="0.411"
+        app:layout_constraintStart_toStartOf="@+id/TaskDescriptionText"
+        app:layout_constraintTop_toTopOf="@+id/Assignedto"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageView
+        android:id="@+id/img"
+        android:layout_width="398dp"
+        android:layout_height="173dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.461"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/project" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
